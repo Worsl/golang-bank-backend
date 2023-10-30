@@ -1,7 +1,7 @@
 # golang-bank-backend
 
 ## Current Schema
-![Alt text](image.png)
+![Alt text](/static/image.png)
 
 ## [3]
  
