@@ -3,6 +3,10 @@
 ## Current Schema
 ![Alt text](/static/image.png)
 
+
+## [Before you begin]
+1. ```docker start postrgres12```,  ```make createdb```, ```make migrateup``` if u did not done so previously
+
 ## [3]
  
 1. ```history | grep "docker run"``` is extremely useful to view docker history, apparently it does show that some of my docker images were removed somehow. Not sure what happened exactly
@@ -14,3 +18,9 @@
         
 ## [4]
 1. SQLC is recommended for GOlang CRUD operations.
+
+## [5]
+1. Convention for unit testing in GoLang : testfile is in the same folder as the actual code.
+<br>
+
+2. Convention for unit testing in Golang : main_test is the entry point of all unit tests inside a specific golang package
