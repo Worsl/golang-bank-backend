@@ -7,7 +7,6 @@ package db
 
 import (
 	"context"
-	"database/sql"
 )
 
 const createEntry = `-- name: CreateEntry :one
@@ -22,8 +21,8 @@ RETURNING id, account_id, amount, created_at
 `
 
 type CreateEntryParams struct {
-	AccountID int64         `json:"account_id"`
-	Amount    sql.NullInt64 `json:"amount"`
+	AccountID int64 `json:"account_id"`
+	Amount    int64 `json:"amount"`
 }
 
 func (q *Queries) CreateEntry(ctx context.Context, arg CreateEntryParams) (Entry, error) {
@@ -113,8 +112,8 @@ RETURNING id, account_id, amount, created_at
 `
 
 type UpdateEntriesParams struct {
-	AccountID int64         `json:"account_id"`
-	Amount    sql.NullInt64 `json:"amount"`
+	AccountID int64 `json:"account_id"`
+	Amount    int64 `json:"amount"`
 }
 
 func (q *Queries) UpdateEntries(ctx context.Context, arg UpdateEntriesParams) (Entry, error) {
