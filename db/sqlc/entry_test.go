@@ -5,7 +5,6 @@ import (
 	"simplebank/util"
 	"testing"
 	"time"
-
 	"github.com/stretchr/testify/require"
 )
 
