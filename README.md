@@ -25,7 +25,7 @@
 
 2. Convention for unit testing in Golang : main_test is the entry point of all unit tests inside a specific golang package
 
-## [6]
+## [5]
 
 1. where to put the dependencies? consider the following snippets of code.
 example 1 is by me, example 2 is by instructor
@@ -135,4 +135,13 @@ The best approach depends on the specific requirements of your test cases:
     If you require more control over the test scenario, want to use existing accounts, or need to create specific test scenarios, Example 2 is a better choice. It gives you the flexibility to set up the test environment according to your needs.
 
 In general, both approaches have their use cases, and the choice should be driven by the specific requirements of your testing strategy and the level of control and reusability you need in your test scenarios.
+```
+
+[6]
+database transactions must be ACID, this is to handle and deal with potential race conditions
+```
+A - atmoic. either all operations complete successfuly, or the transaction files and db is unchaged
+C - consistent. db must be valid after transaction
+I - isolation. concurrent db transactions must not affect each other. There are diff levels of isolation
+D - Durability. data written must be in persistent storage
 ```
