@@ -145,3 +145,30 @@ C - consistent. db must be valid after transaction
 I - isolation. concurrent db transactions must not affect each other. There are diff levels of isolation
 D - Durability. data written must be in persistent storage
 ```
+
+
+
+struct embedding : a form of composition in go that embeds struct within another struct.
+the embedded struct need not to have explicit field names
+
+
+
+```
+type Human struct{
+	name string
+	Phone // embedding phone struct
+}
+
+type Phone struct{
+	model string
+	price int
+}
+
+func NewHuman() Human{
+	human1 := Human{
+		name:"jack",
+		Phone: Phone{model:"iphone", price:500},
+	}
+	return human1
+}
+```
